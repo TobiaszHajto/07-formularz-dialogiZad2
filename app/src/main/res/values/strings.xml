@@ -35,11 +35,14 @@
     <string name="summary_format">%1$s\n%2$s\nUr. %3$s\nKurs: %4$s\nTryb: %5$s\nPoziom: %6$d/10\nNewsletter: %7$s</string>
     <string name="yes_short">tak</string>
     <string name="no_short">nie</string>
-    <string-array name="courses">
-        <item>Wybierz kurs</item>
-        <item>Java</item>
-        <item>Python</item>
-        <item>Android</item>
-        <item>HTML i CSS</item>
+
+    <string-array name="destinations">
+        <item>Wybierz kierunek</item>
+        <item>Chorwacja</item>
+        <item>Włochy</item>
+        <item>Hiszpania</item>
+        <item>Grecja</item>
+        <item>Francja</item>
     </string-array>
+
 </resources>

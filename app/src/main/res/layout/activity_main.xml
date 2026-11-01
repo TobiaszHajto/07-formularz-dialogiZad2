@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    tools:context=".MainActivity">
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,138 +12,91 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/tvHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#008080"
-            android:padding="12dp"
-            android:text="@string/header"
+            android:padding="16dp"
+            android:text="Zapisy na wycieczkę"
             android:textColor="#FFFFFF"
-            android:textSize="28sp" />
+            android:textSize="26sp" />
 
         <TextView
-            android:id="@+id/tvLabelName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/label_name" />
+            android:text="Imię i nazwisko" />
 
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_name"
+            android:hint="Wpisz imię i nazwisko"
             android:inputType="textPersonName"
             android:maxLines="1" />
 
         <TextView
-            android:id="@+id/tvLabelEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@string/label_email" />
-
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_email"
-            android:inputType="textEmailAddress"
-            android:maxLines="1" />
-
-        <TextView
-            android:id="@+id/tvLabelBirthDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="@string/label_birth_date" />
-
-        <Button
-            android:id="@+id/btnBirthDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_pick_date" />
-
-        <TextView
-            android:id="@+id/tvLabelCourse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="@string/label_course" />
+            android:text="Kierunek wycieczki" />
 
         <Spinner
-            android:id="@+id/spCourse"
+            android:id="@+id/spDestination"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/tvLabelMode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="@string/label_mode" />
-
-        <RadioGroup
-            android:id="@+id/rgMode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/rbOnsite"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/mode_onsite" />
-
-            <RadioButton
-                android:id="@+id/rbRemote"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@string/mode_remote" />
-        </RadioGroup>
-
         <LinearLayout
-            android:id="@+id/rowLevel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tvLabelLevel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/label_level" />
+                android:text="Liczba osób" />
 
             <TextView
-                android:id="@+id/tvLevelValue"
+                android:id="@+id/tvPeople"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                tools:text="5" />
+                android:text="1"
+                android:textStyle="bold" />
+
         </LinearLayout>
 
         <SeekBar
-            android:id="@+id/sbLevel"
+            android:id="@+id/sbPeople"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:max="10"
+            android:max="9"
             android:progress="0" />
 
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/swNewsletter"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Data wyjazdu" />
+
+        <Button
+            android:id="@+id/btnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wybierz datę" />
+
+        <Switch
+            android:id="@+id/swInsurance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@string/newsletter" />
+            android:text="Ubezpieczenie" />
 
         <CheckBox
             android:id="@+id/cbTerms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/terms" />
+            android:text="Akceptuję regulamin" />
 
         <Button
             android:id="@+id/btnSubmit"
@@ -153,15 +104,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:enabled="false"
-            android:text="@string/btn_submit" />
+            android:text="Zapisz się" />
 
         <TextView
             android:id="@+id/tvSummary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textSize="16sp"
-            tools:text="Jan Kowalski\njan@przyklad.pl" />
+            android:textSize="16sp" />
 
     </LinearLayout>
+
 </ScrollView>
